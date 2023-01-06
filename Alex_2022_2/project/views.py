@@ -8,7 +8,7 @@ def project_idex(request):
     }
     return render(request,"project_index.html",context)
 def project_detail(request, pk):
-    project = Project.object.get(pk=pk)
+    project = Project.objects.get(pk=pk)
     context = {
         "project": project
     }
