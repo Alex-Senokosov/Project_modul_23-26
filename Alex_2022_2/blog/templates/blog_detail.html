@@ -1,4 +1,4 @@
-% extends "base.html" %}
+{% extends "base.html" %}
 {% block page_content %}
 <div class="col-md-8 offset-md-2">
     <h1>{{ post.title }}</h1>
@@ -26,8 +26,8 @@
     <h3>Комментарии:</h3>
     {% for comment in comments %}
     <p>
-        {{comment.created_on.date }};
-        <b>{{ comment.author }}</b> оставила комментарий:
+        On {{comment.created_on.date }}&nbsp;
+        <b>{{ comment.author }}</b> wrote:
     </p>
     <p>{{ comment.body }}</p>
     <hr>
